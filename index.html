@@ -3,7 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pineal Awakening – Awaken Your Inner Power and Energy</title>
+  <title>Pineal Awakening: How to Activate Your Third Eye and Expand Consciousness</title>
+  <meta name="description" content="Discover how to awaken your pineal gland, decalcify it naturally, and open your Third Eye for spiritual awakening and higher consciousness.">
+  <meta name="keywords" content="Pineal Awakening, Pineal Gland Activation, Third Eye, Spiritual Awakening, Decalcify Pineal Gland, Meditation, Consciousness Expansion">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Pineal Awakening: How to Activate Your Third Eye and Expand Consciousness">
+  <meta property="og:description" content="Learn natural methods to decalcify and activate your pineal gland for deeper meditation and expanded awareness.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://thepinealawakening.com/">
+  <meta property="og:image" content="https://thepinealawakening.com/images/pineal-awakening.jpg">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17676368282"></script>
@@ -25,8 +33,7 @@
       font-family: 'Helvetica Neue', Arial, sans-serif;
       background: #020b1b;
       color: #e8f0ff;
-      overflow: hidden;
-      height: 100vh;
+      overflow-x: hidden;
       width: 100%;
     }
 
@@ -65,6 +72,24 @@
       text-shadow: 0 0 8px rgba(0, 120, 255, 0.6);
     }
 
+    article {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      line-height: 1.7;
+    }
+
+    article h1, article h2 {
+      color: #a4d0ff;
+      margin-bottom: 15px;
+    }
+
+    article p, article li {
+      color: #e8f0ff;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+
     /* COOKIE BOX */
     .cookie-box {
       position: fixed;
@@ -80,19 +105,6 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.5);
       z-index: 9999;
       animation: fadeIn 1s ease;
-    }
-
-    .cookie-box h2 {
-      color: #FFFFFF;
-      font-size: clamp(1.2rem, 3vw, 1.6rem);
-      margin-bottom: 10px;
-    }
-
-    .cookie-box p {
-      margin-bottom: 20px;
-      font-size: clamp(0.9rem, 2vw, 1rem);
-      color: #D9EBEE;
-      line-height: 1.4;
     }
 
     .cookie-box button#acceptCookies {
@@ -114,7 +126,6 @@
       transform: scale(1.05);
     }
 
-    /* Close (X) button */
     .close-btn {
       position: absolute;
       top: 8px;
@@ -146,9 +157,7 @@
     }
 
     @media (max-width: 768px) {
-      .hero {
-        padding: 0 10px;
-      }
+      .hero { padding: 0 10px; }
       .cookie-box {
         bottom: 30px;
         padding: 25px 20px;
@@ -172,6 +181,33 @@
     <p>Discover the natural formula designed to detoxify your body, activate your pineal gland, and elevate your energy and spiritual clarity.</p>
   </section>
 
+  <!-- SEO ARTICLE -->
+  <article>
+    <h1>Pineal Awakening: How to Activate Your Third Eye and Expand Consciousness</h1>
+    <p>The concept of <strong>Pineal Awakening</strong> has fascinated spiritual seekers, scientists, and philosophers for centuries. Known as the “seat of the soul,” the pineal gland is a small, pinecone-shaped organ deep within the brain believed to hold the key to higher states of consciousness and intuition — what we often call the <em>Third Eye</em>.</p>
+
+    <h2>What Is the Pineal Gland?</h2>
+    <p>The pineal gland is part of the endocrine system and produces melatonin, the hormone that regulates sleep and circadian rhythms. Ancient traditions view it as a <strong>gateway to higher dimensions of awareness</strong>. When balanced and active, many report heightened intuition, vivid dreams, and a deep sense of unity.</p>
+
+    <h2>The Science Behind Pineal Awakening</h2>
+    <p>The pineal gland contains <strong>calcite crystals</strong> that can vibrate in response to electromagnetic frequencies, acting as a receiver for energetic information. However, modern habits — fluoride, toxins, stress — can cause <strong>calcification</strong>, limiting our connection to higher consciousness.</p>
+
+    <h2>How to Activate the Pineal Gland Naturally</h2>
+    <ul>
+      <li><strong>Meditation & Breathwork:</strong> Focus between the eyebrows and use deep breathing to stimulate energy flow.</li>
+      <li><strong>Reduce Fluoride and Toxins:</strong> Use fluoride-free toothpaste and filtered water to prevent calcification.</li>
+      <li><strong>Eat Pineal-Activating Foods:</strong> Include spirulina, chlorella, cacao, and seaweed for detox support.</li>
+      <li><strong>Get Natural Sunlight:</strong> Morning light boosts serotonin, the precursor to melatonin.</li>
+      <li><strong>Listen to High-Frequency Sounds:</strong> 963 Hz and solfeggio tones can vibrate and awaken your Third Eye.</li>
+    </ul>
+
+    <h2>The Spiritual Benefits of Pineal Awakening</h2>
+    <p>As your pineal gland awakens, you may experience increased empathy, synchronicities, lucid dreams, and a profound connection with the universe — the essence of <strong>spiritual awakening</strong>.</p>
+
+    <h2>Final Thoughts</h2>
+    <p>Your journey toward <strong>Pineal Awakening</strong> is both personal and sacred. With consistent meditation, clean nutrition, and mindful living, you can activate your pineal gland and expand your consciousness naturally.</p>
+  </article>
+
   <!-- COOKIE BOX -->
   <div class="cookie-box" id="cookieBox" role="dialog" aria-label="Cookie consent">
     <button class="close-btn" id="closeBanner" aria-label="Close and continue">✕</button>
@@ -184,12 +220,9 @@
     const affiliateLink = "https://0f9a8pgbqn8pexeltej6x286se.hop.clickbank.net/";
 
     function redirectToAffiliate() {
-      // small UX: show loading text then redirect
       const box = document.getElementById("cookieBox");
       box.innerHTML = "<p style='color:#fff; font-weight:bold; text-align:center;'>Loading, please wait...</p>";
-      setTimeout(() => {
-        window.location.href = affiliateLink;
-      }, 1000);
+      setTimeout(() => { window.location.href = affiliateLink; }, 1000);
     }
 
     document.getElementById('acceptCookies').addEventListener('click', redirectToAffiliate);
@@ -198,6 +231,3 @@
 
 </body>
 </html>
-
-
-

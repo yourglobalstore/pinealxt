@@ -1,3 +1,5 @@
+html ultra k9
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,10 +21,6 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
@@ -56,6 +54,9 @@
       margin-bottom: 20px;
       color: #a4d0ff;
       text-shadow: 0 0 12px rgba(80, 160, 255, 0.8);
+      background: linear-gradient(90deg, #0092A3, #fff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .hero p {
@@ -66,66 +67,63 @@
       text-shadow: 0 0 8px rgba(0, 120, 255, 0.6);
     }
 
-    /* COOKIE BANNER */
-    .cookie-banner {
+    /* COOKIE BOX */
+    .cookie-box {
       position: fixed;
       bottom: 5%;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(8, 22, 48, 0.9);
-      border: 1px solid rgba(120, 180, 255, 0.3);
+      background: rgba(0,30,40,0.85);
       border-radius: 15px;
       padding: 30px;
       text-align: center;
       max-width: 480px;
       width: 90%;
-      box-shadow: 0 4px 25px rgba(0, 80, 255, 0.3);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
       z-index: 9999;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.8s ease, visibility 0.8s ease;
+      animation: fadeIn 1s ease;
     }
 
-    .cookie-banner.show {
-      opacity: 1;
-      visibility: visible;
+    .cookie-box h2 {
+      color: #FFFFFF;
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      margin-bottom: 10px;
     }
 
-    .cookie-banner p {
-      margin-bottom: 15px;
+    .cookie-box p {
+      margin-bottom: 20px;
       font-size: clamp(0.9rem, 2vw, 1rem);
-      color: #e2edff;
+      color: #D9EBEE;
       line-height: 1.4;
     }
 
-    .cookie-banner button#acceptCookies {
-      background: linear-gradient(90deg, #1a5bff, #6ba8ff);
+    .cookie-box button#acceptCookies {
+      background: linear-gradient(90deg, #0092A3, #fff);
       border: none;
-      color: #fff;
+      color: white;
       font-weight: bold;
       border-radius: 30px;
       padding: 14px 32px;
       cursor: pointer;
-      transition: background 0.3s, transform 0.2s;
+      transition: transform 0.2s, opacity 0.2s;
       font-size: clamp(0.9rem, 2vw, 1.1rem);
       width: 100%;
       max-width: 250px;
-      box-shadow: 0 0 10px rgba(0, 120, 255, 0.4);
     }
 
-    .cookie-banner button#acceptCookies:hover {
-      background: linear-gradient(90deg, #2f6fff, #82bbff);
+    .cookie-box button#acceptCookies:hover {
+      opacity: 0.9;
       transform: scale(1.05);
     }
 
-    /* BOTÃO DE FECHAR (X) AJUSTADO */
+    /* Close (X) button */
     .close-btn {
       position: absolute;
-      top: 10px;
+      top: 8px;
       right: 12px;
       background: #fff;
       border: none;
-      color: #001133;
+      color: #000;
       font-size: 0.85rem;
       font-weight: bold;
       border-radius: 50%;
@@ -134,47 +132,36 @@
       cursor: pointer;
       line-height: 20px;
       text-align: center;
-      transition: all 0.2s ease;
+      transition: all 0.18s ease;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      z-index: 10000;
     }
 
     .close-btn:hover {
-      background: #d9e6ff;
-      color: #000;
-      transform: scale(1.1);
+      background: #e6e6e6;
+      transform: scale(1.08);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translate(-50%, 20px); }
+      to { opacity: 1; transform: translate(-50%, 0); }
     }
 
     @media (max-width: 768px) {
       .hero {
         padding: 0 10px;
-        justify-content: center;
       }
-
-      .cookie-banner {
+      .cookie-box {
         bottom: 30px;
-        padding: 25px 20px 15px 20px;
+        padding: 25px 20px;
         max-width: 95%;
       }
-
       .close-btn {
-        top: 8px;
+        top: 6px;
         right: 10px;
         width: 20px;
         height: 20px;
         font-size: 0.8rem;
-      }
-
-      .cookie-banner button#acceptCookies {
-        padding: 12px 28px;
-      }
-    }
-
-    @media (min-width: 1200px) {
-      .hero h1 {
-        font-size: 3.2rem;
-      }
-      .hero p {
-        font-size: 1.4rem;
       }
     }
   </style>
@@ -187,10 +174,10 @@
     <p>Discover the natural formula designed to detoxify your body, activate your pineal gland, and elevate your energy and spiritual clarity.</p>
   </section>
 
-  <!-- COOKIE CONSENT -->
-  <div class="cookie-banner" id="cookieBanner">
-    <button class="close-btn" id="closeBanner" aria-label="Close cookie consent banner">✕</button>
-    <p>Experience the awakening energy of Pineal Awakening. Continue to discover how this unique blend helps unlock mental focus, deep calm, and universal connection.</p>
+  <!-- COOKIE BOX -->
+  <div class="cookie-box" id="cookieBox" role="dialog" aria-label="Cookie consent">
+    <button class="close-btn" id="closeBanner" aria-label="Close and continue">✕</button>
+    <p>We use cookies to ensure you get the best experience while exploring our site and learning about our products.</p>
     <button id="acceptCookies">Continue</button>
   </div>
 
@@ -198,26 +185,20 @@
   <script>
     const affiliateLink = "https://0f9a8pgbqn8pexeltej6x286se.hop.clickbank.net/";
 
-    // Mostra o banner com delay de 3 segundos
-    window.addEventListener('load', () => {
+    function redirectToAffiliate() {
+      // small UX: show loading text then redirect
+      const box = document.getElementById("cookieBox");
+      box.innerHTML = "<p style='color:#fff; font-weight:bold; text-align:center;'>Loading, please wait...</p>";
       setTimeout(() => {
-        document.getElementById('cookieBanner').classList.add('show');
-      }, 3000);
-    });
+        window.location.href = affiliateLink;
+      }, 1000);
+    }
 
-    document.getElementById('acceptCookies').addEventListener('click', function() {
-      window.location.href = affiliateLink;
-    });
-
-    document.getElementById('closeBanner').addEventListener('click', function() {
-      window.location.href = affiliateLink;
-    });
+    document.getElementById('acceptCookies').addEventListener('click', redirectToAffiliate);
+    document.getElementById('closeBanner').addEventListener('click', redirectToAffiliate);
   </script>
 
 </body>
 </html>
-
-
-
 
 
